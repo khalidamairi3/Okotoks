@@ -1,23 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
   font-family: 'Permanent Marker', cursive;
 }
 
-#index-container {
+.container {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
-  height: 100%;
-  width: 100vw;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-#index-container div {
+.container div {
   width: 100%;
-  max-height: 80vh;
 }
 
 .header {
@@ -27,6 +31,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 12vh;
+  font-size: 11pt;
   -ms-grid-columns: 3fr 1fr 1fr;
       grid-template-columns: 3fr 1fr 1fr;
   text-transform: uppercase;
@@ -40,12 +45,48 @@ body {
 
 .header #logo {
   position: relative;
-  overflow: hidden;
+}
+
+.header #logo img {
+  padding-left: 4vw;
 }
 
 .header #logo span {
   color: white;
   position: relative;
   bottom: 3vh;
+}
+
+#footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 10%;
+  margin-top: 10vh;
+  min-height: 50vh;
+  padding-top: 3vh;
+  font-family: 'Antic Slab', serif;
+  text-align: center;
+  color: white;
+  background-color: #07090fff;
+}
+
+#footer div {
+  width: 85%;
+  text-align: center;
+  margin-left: 7.5%;
+  margin-bottom: 5vh;
+}
+
+#footer div a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer hr {
+  margin-left: 5%;
+  height: 0.5px;
+  width: 90%;
 }
 /*# sourceMappingURL=style.css.map */

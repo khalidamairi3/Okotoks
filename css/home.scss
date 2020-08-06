@@ -1,9 +1,116 @@
-.home{
-    img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover ;
-            opacity: 0.8;
+$queen-pink: #d6c3c9ff;
+$beaver: #b49082ff;
+$chestnut: #98473eff;
+$metallic-sunburst: #a37c40ff;
+$rich-black-fogra-29: #07090fff;
+@import "_variables";
+
+@mixin card () {
+    
+    width: 85%;
+    text-align: center;
+    align-items: center;
+    h2{
+        font-size: 2rem;
+        background: -webkit-radial-gradient(circle, rgba(164,18,18,1) 24%, rgba(7,9,15,1) 81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p{
+        font-family: 'Antic Slab', serif;
+        width: 90%;
+        margin-left: 5%;
         
     }
+
+    
+}
+
+.home{
+    max-height: 80vh;
+    img{
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+            opacity: 0.8;
+            // position: relative;
+        
+    }
+    div{
+        position: relative;
+        bottom: 50vh;
+        text-align: center;
+        margin-bottom: 5vh;
+        color:white ;
+        background-color: $beaver;
+        opacity: 0.75;
+        // width: 75%;
+        height: 8vh;
+        // margin-left: 12.5%;
+        padding-top: 1.5vh;
+        // border-radius: 15px 15px 15px 15px;
+        font-size: 18pt;
+
+    }
+}
+
+.info-card{
+
+    // position: relative;
+    margin-top: 15vh;
+    @include card();
+     
+}
+
+#offer-cards{
+
+    // position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 85%;
+    min-height: 40vh;
+    margin-left: 2.5%;
+    grid-column-gap: 5%;
+}
+
+.offer-card{
+   margin-top: 5vh;
+   margin-left: 5vw;
+   border-radius: 15px 15px 15px 15px;
+   background-color: #EBEBEB;
+   @include card();
+    
+    img{
+        margin-top: 2vh;
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+    }
+}
+#rating{
+    width: 85%;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 7.5%;
+    min-height: 10vh;
+    margin-top: 10vh;
+    background-color:$metallic-sunburst;
+    font-family: 'Antic Slab', serif;
+    font-size: 18pt;
+    text-transform: uppercase;
+    color: white;
+    p{
+        padding: 1vh 2vw;
+        text-align: center;
+    }
+}
+
+#location{
+    color: $rich-black-fogra-29;
+    width: 85%;
+    margin-top: 10vh;
+    text-align: center;
+    margin-left: 7.5%;
+}
+#googleMap{
+    margin-top: 3vh;
 }
