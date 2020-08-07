@@ -31,7 +31,7 @@ body{
     align-items: center;
     height: 12vh;
     // width: 100%;
-    font-size: 11pt;
+    font-size: 9pt;
     grid-template-columns: 3fr 1fr 1fr;
     text-transform: uppercase;
     background: $background_color;
@@ -46,22 +46,35 @@ body{
     }
     
     #logo{
-        position: relative;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    
         img{
+         
             padding-left: 4vw;
 
         }
        
     
+        div{
         
-        span{
+        a{
+            text-align: center;
             color: white;
-            position: relative;
-            bottom: 3vh;
+         
         }
+    }
+        
     }
 
 
+}
+#head{
+    position: relative;
+    right: 6vw;
 }
 
 #footer{
