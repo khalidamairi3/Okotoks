@@ -1,9 +1,5 @@
-@import "_variables";
-$queen-pink: #d6c3c9ff;
-$beaver: #b49082ff;
-$chestnut: #98473eff;
-$metallic-sunburst: #a37c40ff;
-$rich-black-fogra-29: #07090fff;
+@import "_mimix_functions";
+
 *{
     margin: 0;
     padding: 0;
@@ -14,25 +10,15 @@ body{
     font-family: 'Permanent Marker', cursive;
 }
 .container{
-    overflow: hidden;
-    display: grid;
-    min-height: 100%;
-    width: 100%;
-    margin: 0;
+    @include grid($min_height:100%);
     div{
-        width: 100%;
-       
-        
+        width: 100%;         
     }
 }
 
 .header{
-    display: grid;
-    align-items: center;
-    height: 12vh;
-    // width: 100%;
+    @include grid($grid_template_columns:3fr 1fr 1fr);
     font-size: 8.5pt;
-    grid-template-columns: 3fr 1fr 1fr;
     text-transform: uppercase;
     background: $background_color;
     div{
@@ -48,25 +34,18 @@ body{
     #logo{
       
         display: flex;
-        justify-content: center;
         align-items: center;
-        
     
         img{
-         
             padding-left: 4vw;
-
-        }
-       
-    
-        div{
-        
-        a{
+        }   
+        div{      
+             a{
             text-align: center;
             color: white;
          
+             }
         }
-    }
         
     }
 
@@ -77,21 +56,24 @@ body{
     right: 6vw;
 }
 
+.info-card{
+
+    @include card(); 
+    background-color: white;
+}
+
 #footer{
-    display: grid;
-    margin-top: 10vh;
-    min-height: 50vh;
+    @include grid($min_height:50vh);
+    margin-top: 25vh;
     padding-top: 3vh;
-    font-family: 'Antic Slab', serif;
     text-align: center;
+    font-family: 'Antic Slab', serif;
     color: white;
     background-color: $rich-black-fogra-29;
 
     div{
-        
-        width: 85%;
+        @include width_center(85%);
         text-align: center;
-        margin-left: 7.5%;
         margin-bottom: 5vh;
         a{
             color: white;
@@ -99,13 +81,12 @@ body{
         }
     }
     hr{
-        margin-left: 5%;
+        @include width_center(90%);
         height: 0.5px;
-        width: 90%;
+        
     }
 
 }
-
 
 
 

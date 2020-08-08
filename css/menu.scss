@@ -1,56 +1,29 @@
-@import "_variables";
-
+@import "_mimix_functions";
 #main-menu{
     img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+       @include image_to_fit();
     }
 }
 #menu{
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @include grid($width:85%,$grid_template_columns:repeat(auto-fit, minmax(250px, 1fr)),$grid_column_gap:3vw);
     margin-left: 7.5%;
-    grid-column-gap: 3vw;
-
 }
 
 .menu-card{
     position: relative;
-    margin-top: 5vh;
-    text-align: center;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #EBEBEB;
-    color: $rich-black-fogra-29;
-    font-family: 'Antic Slab', serif;
-    padding-bottom: 2.5vh;
+    @include card();
 
     img{
-        
-        width: 100%;
-        height: 20vh;
-        border-radius: 15px 15px 0 0;
+        @include image_to_fit(100%,20vh,15px 15px 0 0);
         opacity: 0.85;
-        object-fit: cover;
-
         float: left;
     }
-    h4{
-        font-family: 'Permanent Marker', cursive;
-        background: -webkit-radial-gradient(circle, rgba(164,18,18,1) 24%, rgba(7,9,15,1) 81%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    p{
-        
-        font-size: 0.9em;
-        
+ 
+    p{  
+        font-size: 0.9em;   
     }
  
 }
-
-
 
 .price{
         
@@ -58,20 +31,16 @@
     position: absolute;
     transform: rotate(-30deg);
     right: 40%;
+    bottom: 65%;
     font-size: 14pt;
     margin: inherit;
     color: $chestnut;
     
-    // -ms-transform: rotate(20deg);
-    
-    // left: 85%;
-    // bottom: 0.5%;
 }
 
 .sizes{
-    display: grid;
-    width: 90%;
+    @include grid($width:90%,$grid_template_columns:repeat(3,1fr));
     text-align: center;
-    grid-template-columns: repeat(3,1fr);
     margin-top: 3vh;
+    font-family: 'Antic Slab', serif;
 }

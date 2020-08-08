@@ -12,12 +12,15 @@ body {
 }
 
 .container {
-  overflow: hidden;
   display: -ms-grid;
   display: grid;
-  min-height: 100%;
   width: 100%;
-  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  grid-column-gap: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container div {
@@ -27,13 +30,16 @@ body {
 .header {
   display: -ms-grid;
   display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 12vh;
+  -ms-grid-columns: 3fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr;
+  grid-column-gap: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 12vh;
   font-size: 8.5pt;
-  -ms-grid-columns: 3fr 1fr 1fr;
-      grid-template-columns: 3fr 1fr 1fr;
   text-transform: uppercase;
   background: radial-gradient(circle, #98473e 0%, #07090f 81%);
 }
@@ -47,9 +53,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,22 +72,54 @@ body {
   right: 6vw;
 }
 
+.info-card {
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+  width: 85%;
+  text-align: center;
+  padding-bottom: 10%;
+  background: #ebebeb;
+  background-color: white;
+}
+
+.info-card h2, .info-card h4 {
+  background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info-card h2 {
+  font-size: 24pt;
+}
+
+.info-card p {
+  font-family: 'Antic Slab', serif;
+  width: 90%;
+  margin-left: 5%;
+}
+
 #footer {
   display: -ms-grid;
   display: grid;
-  margin-top: 10vh;
+  width: 100%;
+  height: 100%;
   min-height: 50vh;
+  grid-column-gap: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25vh;
   padding-top: 3vh;
-  font-family: 'Antic Slab', serif;
   text-align: center;
+  font-family: 'Antic Slab', serif;
   color: white;
   background-color: #07090fff;
 }
 
 #footer div {
   width: 85%;
-  text-align: center;
   margin-left: 7.5%;
+  text-align: center;
   margin-bottom: 5vh;
 }
 
@@ -94,8 +129,8 @@ body {
 }
 
 #footer hr {
+  width: 90%;
   margin-left: 5%;
   height: 0.5px;
-  width: 90%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,41 +8,54 @@
 }
 
 #menu {
-  width: 85%;
   display: -ms-grid;
   display: grid;
+  width: 85%;
+  height: 100%;
+  min-height: 12vh;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-left: 7.5%;
   grid-column-gap: 3vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 7.5%;
 }
 
 .menu-card {
   position: relative;
-  margin-top: 5vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+  width: 85%;
   text-align: center;
-  border-radius: 15px 15px 15px 15px;
-  background-color: #EBEBEB;
-  color: #07090fff;
+  padding-bottom: 10%;
+  background: #ebebeb;
+}
+
+.menu-card h2, .menu-card h4 {
+  background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-card h2 {
+  font-size: 24pt;
+}
+
+.menu-card p {
   font-family: 'Antic Slab', serif;
-  padding-bottom: 2.5vh;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .menu-card img {
   width: 100%;
   height: 20vh;
-  border-radius: 15px 15px 0 0;
-  opacity: 0.85;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  opacity: 0.85;
   float: left;
-}
-
-.menu-card h4 {
-  font-family: 'Permanent Marker', cursive;
-  background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .menu-card p {
@@ -55,6 +68,7 @@
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
   right: 40%;
+  bottom: 65%;
   font-size: 14pt;
   margin: inherit;
   color: #98473eff;
@@ -64,9 +78,16 @@
   display: -ms-grid;
   display: grid;
   width: 90%;
-  text-align: center;
+  height: 100%;
+  min-height: 12vh;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   margin-top: 3vh;
+  font-family: 'Antic Slab', serif;
 }
 /*# sourceMappingURL=menu.css.map */
