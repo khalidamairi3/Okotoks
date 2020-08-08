@@ -1,9 +1,18 @@
+@import "_variables";
+
+#main-menu{
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 #menu{
     width: 85%;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-left: 7.5%;
+    grid-column-gap: 3vw;
 
 }
 
@@ -13,30 +22,56 @@
     text-align: center;
     border-radius: 15px 15px 15px 15px;
     background-color: #EBEBEB;
+    color: $rich-black-fogra-29;
+    font-family: 'Antic Slab', serif;
+    padding-bottom: 2.5vh;
 
     img{
         
         width: 100%;
         height: 20vh;
         border-radius: 15px 15px 0 0;
+        opacity: 0.85;
         object-fit: cover;
 
         float: left;
     }
     h4{
- 
+        font-family: 'Permanent Marker', cursive;
         background: -webkit-radial-gradient(circle, rgba(164,18,18,1) 24%, rgba(7,9,15,1) 81%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     p{
-        font-family: 'Antic Slab', serif;
+        
         font-size: 0.9em;
         
     }
-    span{
-        position: relative;
-        // left: 85%;
-        // bottom: 0.5%;
-    }
+ 
+}
+
+
+
+.price{
+        
+    font-family: fantasy;
+    position: absolute;
+    transform: rotate(-30deg);
+    right: 40%;
+    font-size: 14pt;
+    margin: inherit;
+    color: $chestnut;
+    
+    // -ms-transform: rotate(20deg);
+    
+    // left: 85%;
+    // bottom: 0.5%;
+}
+
+.sizes{
+    display: grid;
+    width: 90%;
+    text-align: center;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3vh;
 }
