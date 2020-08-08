@@ -79,8 +79,6 @@ body{
 
 #footer{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    grid-column-gap: 10%;
     margin-top: 10vh;
     min-height: 50vh;
     padding-top: 3vh;
