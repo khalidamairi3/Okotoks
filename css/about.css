@@ -44,4 +44,40 @@
        object-fit: cover;
   }
 }
+
+@media only screen and (min-width: 1000px) {
+  #about {
+    max-height: 50vh;
+  }
+  #about img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #introductory-video {
+    width: 70%;
+    margin-left: 15%;
+  }
+  #introductory-video iframe {
+    width: 100%;
+    height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px 15px 15px 15px;
+  }
+  #about-content {
+    max-height: 50vh;
+    margin-bottom: 15;
+    width: 70%;
+    margin-left: 15%;
+  }
+  #about-content img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0 0 0 0;
+  }
+}
 /*# sourceMappingURL=about.css.map */

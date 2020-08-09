@@ -102,24 +102,24 @@ body{
 
         font-size: 16pt;
     }
-    .info-card{
-
-        @include tablet_card(); 
-        background-color: white;
-    }
+   
     #logo{
         img{
-            width: 14vw;
+            width: 120px;
             padding-left: 4vw;
         }   
         
     }
     #head{
-        right: 10vw;
+        right: 6vw;
     }
+    .info-card{
 
+        @include tablet_card(); 
+        background-color: white;
+    }
     #footer{
-        max-height: 35vh;
+        max-height: 40vh;
         margin-top: 15vh;
         font-size: 1.5em;
     
@@ -128,7 +128,40 @@ body{
     
 }
 
+@media only screen and (min-width: 1000px){
+  
+    .header{
 
+        font-size: 20pt;
+    }
+
+    #logo{
+        img{
+            width: 120px;
+            padding-top: 1vh;
+        }   
+        
+    }
+    #head{
+        right: 14vw;
+    }
+    .info-card{
+
+        @include desktop_card ();
+        background-color: white;
+        margin-bottom: 0;
+
+    }
+    #footer{
+        @include grid($grid_template_columns:repeat(2,1fr));
+        .copy-right{
+            grid-column: span 2;
+        }
+    
+    }
+    
+    
+}
 
 
 

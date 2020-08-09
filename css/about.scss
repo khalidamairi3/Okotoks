@@ -33,3 +33,30 @@
     }
 
 }
+@media only screen and (min-width:1000px){
+    #about{
+        max-height: 50vh;
+        img{
+            @include image_to_fit($height:50vh);
+        }
+    
+    }
+    #introductory-video{
+        @include width_center(70%);
+        iframe{
+            @include image_to_fit($height:60vh,$border-radius: 15px 15px 15px 15px);
+             
+        }
+    
+    }
+    #about-content{
+        max-height: 50vh;
+        margin-bottom: 15;
+        @include width_center(70%);
+        img{
+            @include image_to_fit($height: 50vh, $border_radius:0 0 0 0);
+        }
+    
+    }
+
+}

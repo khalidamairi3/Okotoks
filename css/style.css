@@ -148,6 +148,13 @@ body {
   .header {
     font-size: 16pt;
   }
+  #logo img {
+    width: 120px;
+    padding-left: 4vw;
+  }
+  #head {
+    right: 6vw;
+  }
   .info-card {
     margin-bottom: 10vh;
     margin-top: 10vh;
@@ -179,17 +186,71 @@ body {
   .info-card p {
     font-size: 14pt;
   }
-  #logo img {
-    width: 14vw;
-    padding-left: 4vw;
-  }
-  #head {
-    right: 10vw;
-  }
   #footer {
-    max-height: 35vh;
+    max-height: 40vh;
     margin-top: 15vh;
     font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    font-size: 20pt;
+  }
+  #logo img {
+    width: 120px;
+    padding-top: 1vh;
+  }
+  #head {
+    right: 14vw;
+  }
+  .info-card {
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    width: 85%;
+    text-align: center;
+    padding-bottom: 10%;
+    background: #ebebeb;
+    background-color: white;
+    margin-bottom: 0;
+  }
+  .info-card h2, .info-card h4 {
+    background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .info-card h2 {
+    font-size: 24pt;
+  }
+  .info-card p {
+    font-family: 'Antic Slab', serif;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .info-card h4 {
+    font-size: 24pt;
+  }
+  .info-card h2 {
+    font-size: 32pt;
+  }
+  .info-card p {
+    font-size: 20pt;
+  }
+  #footer {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 12vh;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer .copy-right {
+    grid-column: span 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
