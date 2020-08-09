@@ -9,6 +9,9 @@ body{
     min-height: 100%;
     font-family: 'Permanent Marker', cursive;
 }
+.tablet_desktop{
+    display: none;
+}
 .container{
     @include grid($min_height:100%);
     div{
@@ -89,6 +92,12 @@ body{
 }
 
 @media only screen and (min-width: 600px){
+    .tablet_desktop{
+        display: inline;
+    }
+    .mobile{
+        display: none;
+    }
     .header{
 
         font-size: 16pt;

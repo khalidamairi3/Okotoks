@@ -11,6 +11,10 @@ body {
   font-family: 'Permanent Marker', cursive;
 }
 
+.tablet_desktop {
+  display: none;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -135,6 +139,12 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
+  .tablet_desktop {
+    display: inline;
+  }
+  .mobile {
+    display: none;
+  }
   .header {
     font-size: 16pt;
   }
