@@ -63,7 +63,7 @@ body{
 }
 
 #footer{
-    @include grid($min_height:50vh);
+    @include grid($min_height:10vh);
     margin-top: 25vh;
     padding-top: 3vh;
     text-align: center;
@@ -86,6 +86,37 @@ body{
         
     }
 
+}
+
+@media only screen and (min-width: 600px){
+    .header{
+
+        font-size: 16pt;
+    }
+    .info-card{
+
+        @include tablet_card(); 
+        background-color: white;
+    }
+    #logo{
+        img{
+            width: 14vw;
+            padding-left: 4vw;
+        }   
+        
+    }
+    #head{
+        right: 10vw;
+    }
+
+    #footer{
+        max-height: 35vh;
+        margin-top: 15vh;
+        font-size: 1.5em;
+    
+    }
+    
+    
 }
 
 

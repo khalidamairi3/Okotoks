@@ -103,7 +103,7 @@ body {
   display: grid;
   width: 100%;
   height: 100%;
-  min-height: 50vh;
+  min-height: 10vh;
   grid-column-gap: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -132,5 +132,54 @@ body {
   width: 90%;
   margin-left: 5%;
   height: 0.5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .header {
+    font-size: 16pt;
+  }
+  .info-card {
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    width: 85%;
+    text-align: center;
+    padding-bottom: 10%;
+    background: #ebebeb;
+    background-color: white;
+  }
+  .info-card h2, .info-card h4 {
+    background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .info-card h2 {
+    font-size: 24pt;
+  }
+  .info-card p {
+    font-family: 'Antic Slab', serif;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .info-card h4 {
+    font-size: 20pt;
+  }
+  .info-card h2 {
+    font-size: 30pt;
+  }
+  .info-card p {
+    font-size: 14pt;
+  }
+  #logo img {
+    width: 14vw;
+    padding-left: 4vw;
+  }
+  #head {
+    right: 10vw;
+  }
+  #footer {
+    max-height: 35vh;
+    margin-top: 15vh;
+    font-size: 1.5em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

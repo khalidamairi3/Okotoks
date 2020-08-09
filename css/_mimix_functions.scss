@@ -29,6 +29,22 @@
 
     
 }
+@mixin tablet_card () {
+    @include card();
+    h4{
+        
+        font-size: 20pt;
+    }
+
+    h2{
+        font-size: 30pt;
+    }
+   
+    p{
+        font-size: 14pt;
+    }
+    
+}
 
 @mixin image_to_fit($width:100%,$height:100%,$border_radius:null){
     width: $width;
@@ -48,4 +64,9 @@
   
     
 }
+
+
+
+    
+
 

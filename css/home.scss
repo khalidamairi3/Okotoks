@@ -62,3 +62,33 @@
 #googleMap{
     margin-top: 3vh;
 }
+
+@media only screen and (min-width: 600px){
+
+    .home{
+        max-height: 60vh;
+        img{
+                @include image_to_fit($height:60vh);   
+        }
+        div{
+            bottom: 35vh;
+            font-size: 24pt;
+    
+        }
+    }
+    
+    #offer-cards{
+    
+        @include grid(85%,100%,40vh,repeat(auto-fit,minmax(350px, 1fr)),5%);
+        margin-left: 2.5%;
+        
+    }
+    #rating{
+        margin-top: 7vh;
+    }
+    
+    #location{
+       font-size: 20pt;
+    }
+  
+}

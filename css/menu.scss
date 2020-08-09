@@ -44,3 +44,20 @@
     margin-top: 3vh;
     font-family: 'Antic Slab', serif;
 }
+
+@media only screen and (min-width: 600px){
+    #main-menu{
+        max-height: 35vh;
+        img{
+           @include image_to_fit($height:35vh);
+        }
+    }    
+    .menu-card{
+        @include tablet_card();
+    
+    }
+    .sizes{
+        margin-top: 1.5vh;
+       
+    }
+}
