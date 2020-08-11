@@ -1,4 +1,4 @@
-@import "_mimix_functions";
+@import "_mixin_functions";
 #main-menu{
     img{
        @include image_to_fit();

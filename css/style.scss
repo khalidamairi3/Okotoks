@@ -1,4 +1,4 @@
-@import "_mimix_functions";
+@import "_mixin_functions";
 
 *{
     margin: 0;
@@ -119,7 +119,7 @@ body{
         background-color: white;
     }
     #footer{
-        max-height: 40vh;
+   
         margin-top: 15vh;
         font-size: 1.5em;
     
@@ -153,6 +153,7 @@ body{
 
     }
     #footer{
+        // max-height: 35vh;
         @include grid($grid_template_columns:repeat(2,1fr));
         .copy-right{
             grid-column: span 2;
