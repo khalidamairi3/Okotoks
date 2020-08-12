@@ -6,12 +6,13 @@
 }
 #menu{
     @include grid($width:85%,$grid_template_columns:repeat(auto-fit, minmax(250px, 1fr)),$grid_column_gap:3vw);
-    margin-left: 7.5%;
+   
 }
 
 .menu-card{
     position: relative;
     @include card();
+    grid-template-rows: 5fr 1fr 2fr;
 
     img{
         @include image_to_fit(100%,20vh,15px 15px 0 0);
@@ -25,18 +26,7 @@
  
 }
 
-.price{
-        
-    font-family: fantasy;
-    position: absolute;
-    transform: rotate(-30deg);
-    right: 40%;
-    bottom: 65%;
-    font-size: 14pt;
-    margin: inherit;
-    color: $chestnut;
-    
-}
+
 
 .sizes{
     @include grid($width:90%,$grid_template_columns:repeat(3,1fr));
@@ -53,7 +43,7 @@
         }
     }    
     .menu-card{
-        @include tablet_card();
+        @include card(30pt,20pt,14pt);
     
     }
     .sizes{
@@ -62,7 +52,7 @@
     }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 1000px){
    
     .menu-card{
         div{

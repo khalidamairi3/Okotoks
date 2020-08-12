@@ -19,17 +19,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 7.5%;
+  justify-items: center;
 }
 
 .menu-card {
   position: relative;
+  display: -ms-grid;
+  display: grid;
   margin-bottom: 10vh;
   margin-top: 10vh;
   width: 85%;
   text-align: center;
   padding-bottom: 10%;
   background: #ebebeb;
+  -ms-grid-rows: 5fr 1fr 2fr;
+      grid-template-rows: 5fr 1fr 2fr;
 }
 
 .menu-card h2, .menu-card h4 {
@@ -62,18 +66,6 @@
   font-size: 0.9em;
 }
 
-.price {
-  font-family: fantasy;
-  position: absolute;
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
-  right: 40%;
-  bottom: 65%;
-  font-size: 14pt;
-  margin: inherit;
-  color: #98473eff;
-}
-
 .sizes {
   display: -ms-grid;
   display: grid;
@@ -86,6 +78,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
   text-align: center;
   margin-top: 3vh;
   font-family: 'Antic Slab', serif;
@@ -102,6 +95,8 @@
        object-fit: cover;
   }
   .menu-card {
+    display: -ms-grid;
+    display: grid;
     margin-bottom: 10vh;
     margin-top: 10vh;
     width: 85%;
@@ -114,14 +109,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .menu-card h2 {
-    font-size: 24pt;
-  }
-  .menu-card p {
-    font-family: 'Antic Slab', serif;
-    width: 90%;
-    margin-left: 5%;
-  }
   .menu-card h4 {
     font-size: 20pt;
   }
@@ -130,13 +117,16 @@
   }
   .menu-card p {
     font-size: 14pt;
+    font-family: 'Antic Slab', serif;
+    width: 90%;
+    margin-left: 5%;
   }
   .sizes {
     margin-top: 1.5vh;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
   .menu-card div {
     font-size: 16pt;
   }

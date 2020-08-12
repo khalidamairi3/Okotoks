@@ -9,6 +9,7 @@ body{
     min-height: 100%;
     font-family: 'Permanent Marker', cursive;
 }
+
 .tablet_desktop{
     display: none;
 }
@@ -19,41 +20,67 @@ body{
     }
 }
 
+.mobile_header{
+    @include header();
+}
 .header{
-    @include grid($grid_template_columns:3fr 1fr 1fr);
-    font-size: 8.5pt;
-    text-transform: uppercase;
-    background: $background_color;
-    div{
+    display: none;
+}
+#mobile-hamburger-menu {
+
+    #mobile-menu-checkbox {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        opacity: 0;
+        z-index: 5;
+    }
     
-        a{
+    #mobile-menu-checkbox:checked ~ #mobile-header-menu {
+        top: 0;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #mobile-hamburger-container {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        z-index: 4;
+        position: relative;
+        border: 1px solid white;
+        border-radius: 10px 10px 10px 10px;
+
+        .mobile-hamburger-line {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+        }
+    }
+
+    #mobile-header-menu {
+        transition: all 0.5s ease-in-out;
+        position: absolute;
+        width: 100%;
+        background-color: $rich-black-fogra-29;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        top: -15vh;
+        opacity: 0;
+        left: 0;
+        min-height: 15vh;
+
+        a {
             color: white;
             text-decoration: none;
-           
+            font-weight: bold;
         }
-        
     }
-    
-    #logo{
-      
-        display: flex;
-        align-items: center;
-    
-        img{
-            padding-left: 4vw;
-        }   
-        div{      
-             a{
-            text-align: center;
-            color: white;
-         
-             }
-        }
-        
-    }
-
-
 }
+
 #head{
     position: relative;
     right: 6vw;
@@ -95,12 +122,12 @@ body{
     .tablet_desktop{
         display: inline;
     }
-    .mobile{
+    .mobile,.mobile_header{
         display: none;
     }
     .header{
-
-        font-size: 16pt;
+       @include header(14pt);
+    
     }
    
     #logo{
@@ -115,7 +142,7 @@ body{
     }
     .info-card{
 
-        @include tablet_card(); 
+        @include card(30pt,20pt,14pt); 
         background-color: white;
     }
     #footer{
@@ -129,11 +156,32 @@ body{
 }
 
 @media only screen and (min-width: 1000px){
+    .container{
   
     .header{
-
-        font-size: 20pt;
+            @include grid($width:70%,$height:null,$grid_template_columns:3fr 1fr 1fr);
+            background: white;
+            z-index: 1;
+            @include width_center(70%);
+            opacity: 0.9;
+            font-size: 20pt;
+            border-radius: 15px 15px 15px 15px;
+            position: absolute;
+            top: 0;
+            text-transform: uppercase;
+            div{
+            
+                a{
+                    background: $card_text_color;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-decoration: none;
+                   
+                }
+                
+            }  
     }
+}
 
     #logo{
         img{
@@ -143,17 +191,16 @@ body{
         
     }
     #head{
-        right: 14vw;
+        right: 6vw;
     }
     .info-card{
 
-        @include desktop_card ();
+        @include card (32pt,24pt,20pt);
         background-color: white;
         margin-bottom: 0;
 
     }
     #footer{
-        // max-height: 35vh;
         @include grid($grid_template_columns:repeat(2,1fr));
         .copy-right{
             grid-column: span 2;

@@ -4,7 +4,8 @@
     margin-left: (100%-$width)/2;
     
 }
-@mixin card () {
+@mixin card ($h2size:24pt,$h4size:null,$psize:null) {
+    display: grid;
     margin-bottom: 10vh;
     margin-top: 10vh ;
     width: 85%;
@@ -17,50 +18,23 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    h4{
+        font-size: $h4size;
+    }
 
     h2{
-        font-size: 24pt;
+        font-size: $h2size;
     }
    
     p{
+        font-size: $psize;
         font-family: 'Antic Slab', serif;
         @include width_center(90%);  
     }
 
     
 }
-@mixin tablet_card () {
-    @include card();
-    h4{
-        
-        font-size: 20pt;
-    }
 
-    h2{
-        font-size: 30pt;
-    }
-   
-    p{
-        font-size: 14pt;
-    }
-    
-}
-@mixin desktop_card () {
-    @include card();
-    h4{
-        
-        font-size: 24pt;
-    }
-
-    h2{
-        font-size: 32pt;
-    }
-   
-    p{
-        font-size: 20pt;
-    }
-    
-}
 
 @mixin image_to_fit($width:100%,$height:100%,$border_radius:null){
     width: $width;
@@ -77,7 +51,43 @@
     grid-template-columns: $grid_template_columns;
     grid-column-gap:$grid_column_gap ;
     align-items: center;
+    justify-items: center;
   
+    
+}
+
+@mixin header ($fontSize:9pt) {
+    @include grid($height:null,$grid_template_columns:3fr 1fr 1fr);
+    font-size:$fontSize;
+    text-transform: uppercase;
+    background: $background_color;
+    div{
+    
+        a{
+            color: white;
+            text-decoration: none;
+           
+        }
+        
+    }
+    
+    #logo{
+      
+        display: flex;
+        align-items: center;
+    
+        img{
+            padding-left: 4vw;
+        }   
+        div{      
+             a{
+            text-align: center;
+            color: white;
+         
+             }
+        }
+        
+    }
     
 }
 

@@ -37,18 +37,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 2.5%;
+  justify-items: center;
 }
 
 .offer-card {
-  margin-left: 5vw;
   border-radius: 15px 15px 15px 15px;
+  display: -ms-grid;
+  display: grid;
   margin-bottom: 10vh;
   margin-top: 10vh;
   width: 85%;
   text-align: center;
   padding-bottom: 10%;
   background: #ebebeb;
+  -ms-grid-rows: 5fr 1fr 1fr;
+      grid-template-rows: 5fr 1fr 1fr;
 }
 
 .offer-card h2, .offer-card h4 {
@@ -77,7 +80,6 @@
 
 #rating {
   width: 85%;
-  margin-left: 7.5%;
   border-radius: 15px 15px 15px 15px;
   min-height: 10vh;
   margin-top: 10vh;
@@ -131,7 +133,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 2.5%;
+    justify-items: center;
   }
   #rating {
     margin-top: 7vh;
@@ -143,16 +145,16 @@
 
 @media only screen and (min-width: 1000px) {
   .home {
-    max-height: 45vh;
+    max-height: 85vh;
   }
   .home img {
     width: 100%;
-    height: 45vh;
+    height: 85vh;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .home div {
-    bottom: 30vh;
+    bottom: 50vh;
     font-size: 30pt;
   }
   #offer-cards {
@@ -167,8 +169,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    justify-items: center;
   }
   .offer-card {
+    display: -ms-grid;
+    display: grid;
     margin-bottom: 10vh;
     margin-top: 10vh;
     width: 85%;
@@ -182,14 +187,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .offer-card h2 {
-    font-size: 24pt;
-  }
-  .offer-card p {
-    font-family: 'Antic Slab', serif;
-    width: 90%;
-    margin-left: 5%;
-  }
   .offer-card h4 {
     font-size: 24pt;
   }
@@ -198,6 +195,9 @@
   }
   .offer-card p {
     font-size: 20pt;
+    font-family: 'Antic Slab', serif;
+    width: 90%;
+    margin-left: 5%;
   }
   #rating {
     font-size: 2.0rem;
