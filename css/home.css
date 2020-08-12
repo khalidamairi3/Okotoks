@@ -50,8 +50,8 @@
   text-align: center;
   padding-bottom: 10%;
   background: #ebebeb;
-  -ms-grid-rows: 5fr 1fr 1fr;
-      grid-template-rows: 5fr 1fr 1fr;
+  -ms-grid-rows: 5fr 1fr 2fr;
+      grid-template-rows: 5fr 1fr 2fr;
 }
 
 .offer-card h2, .offer-card h4 {
@@ -97,7 +97,6 @@
 
 #location {
   width: 85%;
-  margin-left: 7.5%;
   color: #07090fff;
   margin-top: 10vh;
   text-align: center;
