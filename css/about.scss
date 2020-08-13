@@ -7,7 +7,7 @@
 
 }
 #introductory-video{
-    @include width_center(85%);
+    width: 85%;
     iframe{
         @include image_to_fit($height:50vh,$border-radius: 15px 15px 15px 15px);
          
@@ -17,7 +17,7 @@
 
 #about-content{
 
-    @include width_center(85%);
+    width: 85%;
     img{
       @include image_to_fit($border_radius: 15px 15px 15px 15px)
         
@@ -42,7 +42,7 @@
     
     }
     #introductory-video{
-        @include width_center(70%);
+        width: 70%;
         iframe{
             @include image_to_fit($height:60vh,$border-radius: 15px 15px 15px 15px);
              
@@ -51,8 +51,8 @@
     }
     #about-content{
         max-height: 50vh;
-        margin-bottom: 15;
-        @include width_center(70%);
+        margin-bottom: 15vh;
+        width:70%;
         img{
             @include image_to_fit($height: 50vh, $border_radius:0 0 0 0);
         }

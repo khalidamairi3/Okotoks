@@ -6,8 +6,8 @@
 }
 @mixin card ($h2size:24pt,$h4size:null,$psize:null) {
     display: grid;
-    margin-bottom: 10vh;
-    margin-top: 10vh ;
+    margin-bottom: 5vh;
+    margin-top: 5vh ;
     width: 85%;
     text-align: center;
     padding-bottom: 10%;

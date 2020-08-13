@@ -44,8 +44,8 @@
   border-radius: 15px 15px 15px 15px;
   display: -ms-grid;
   display: grid;
-  margin-bottom: 10vh;
-  margin-top: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   width: 85%;
   text-align: center;
   padding-bottom: 10%;
@@ -134,6 +134,33 @@
             align-items: center;
     justify-items: center;
   }
+  .offer-card {
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    width: 85%;
+    text-align: center;
+    padding-bottom: 10%;
+    background: #ebebeb;
+  }
+  .offer-card h2, .offer-card h4 {
+    background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .offer-card h4 {
+    font-size: 20pt;
+  }
+  .offer-card h2 {
+    font-size: 30pt;
+  }
+  .offer-card p {
+    font-size: 18pt;
+    font-family: 'Antic Slab', serif;
+    width: 90%;
+    margin-left: 5%;
+  }
   #rating {
     margin-top: 7vh;
   }
@@ -173,8 +200,8 @@
   .offer-card {
     display: -ms-grid;
     display: grid;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     width: 85%;
     text-align: center;
     padding-bottom: 10%;

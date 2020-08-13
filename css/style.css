@@ -144,8 +144,8 @@ body {
 .info-card {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 10vh;
-  margin-top: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   width: 85%;
   text-align: center;
   padding-bottom: 10%;
@@ -258,8 +258,8 @@ body {
   .info-card {
     display: -ms-grid;
     display: grid;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     width: 85%;
     text-align: center;
     padding-bottom: 10%;
@@ -329,8 +329,8 @@ body {
   .info-card {
     display: -ms-grid;
     display: grid;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     width: 85%;
     text-align: center;
     padding-bottom: 10%;
