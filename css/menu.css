@@ -34,6 +34,7 @@
   background: #ebebeb;
   -ms-grid-rows: 5fr 1fr 2fr;
       grid-template-rows: 5fr 1fr 2fr;
+  border-radius: 15px 15px 15px 15px;
 }
 
 .menu-card h2, .menu-card h4 {
