@@ -23,6 +23,8 @@ body{
 .mobile_header{
     @include header();
 }
+
+//tablet and desktop header to not e shown in mobile version//
 .header{
     display: none;
 }
@@ -40,6 +42,7 @@ body{
         top: 0;
         opacity: 1;
         transition: all 0.5s ease-in-out;
+        z-index: 1;
     }
 
     #mobile-hamburger-container {
@@ -64,7 +67,7 @@ body{
         transition: all 0.5s ease-in-out;
         position: absolute;
         width: 100%;
-        background-color: $rich-black-fogra-29;
+        background-color: white;
         display: grid;
         justify-items: center;
         align-items: center;
@@ -74,7 +77,9 @@ body{
         min-height: 15vh;
 
         a {
-            color: white;
+            background: $card_text_color;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-decoration: none;
             font-weight: bold;
         }
@@ -102,8 +107,7 @@ body{
     background-color: $rich-black-fogra-29;
 
     div{
-        @include width_center(85%);
-        text-align: center;
+        width: 85%;
         margin-bottom: 5vh;
         a{
             color: white;
@@ -137,9 +141,7 @@ body{
         }   
         
     }
-    #head{
-        right: 6vw;
-    }
+
     .info-card{
 
         @include card(30pt,20pt,14pt); 
@@ -162,8 +164,8 @@ body{
             @include grid($width:70%,$height:null,$grid_template_columns:3fr 1fr 1fr);
             background: white;
             z-index: 1;
-            @include width_center(70%);
-            opacity: 0.9;
+            width: 70%;
+            margin-left: 15%;
             font-size: 20pt;
             border-radius: 15px 15px 15px 15px;
             position: absolute;
@@ -176,7 +178,7 @@ body{
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     text-decoration: none;
-                   
+                
                 }
                 
             }  
@@ -190,9 +192,7 @@ body{
         }   
         
     }
-    #head{
-        right: 6vw;
-    }
+  
     .info-card{
 
         @include card (32pt,24pt,20pt);

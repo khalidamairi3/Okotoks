@@ -23,7 +23,6 @@
 }
 
 .menu-card {
-  position: relative;
   display: -ms-grid;
   display: grid;
   margin-bottom: 5vh;
@@ -32,6 +31,10 @@
   text-align: center;
   padding-bottom: 10%;
   background: #ebebeb;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-rows: 5fr 1fr 2fr;
       grid-template-rows: 5fr 1fr 2fr;
   border-radius: 15px 15px 15px 15px;
@@ -49,8 +52,7 @@
 
 .menu-card p {
   font-family: 'Antic Slab', serif;
-  width: 90%;
-  margin-left: 5%;
+  width: 85%;
 }
 
 .menu-card img {
@@ -104,6 +106,10 @@
     text-align: center;
     padding-bottom: 10%;
     background: #ebebeb;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .menu-card h2, .menu-card h4 {
     background: -webkit-radial-gradient(circle, #a41212 24%, #07090f 81%);
@@ -119,8 +125,13 @@
   .menu-card p {
     font-size: 14pt;
     font-family: 'Antic Slab', serif;
-    width: 90%;
-    margin-left: 5%;
+    width: 85%;
+  }
+  .menu-card:hover {
+    -webkit-box-shadow: 5px 5px 2px grey;
+            box-shadow: 5px 5px 2px grey;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .sizes {
     margin-top: 1.5vh;

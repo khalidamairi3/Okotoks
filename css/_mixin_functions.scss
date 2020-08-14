@@ -1,9 +1,4 @@
 @import "_variables";
-@mixin width_center($width) {
-    width: $width;
-    margin-left: (100%-$width)/2;
-    
-}
 @mixin card ($h2size:24pt,$h4size:null,$psize:null) {
     display: grid;
     margin-bottom: 5vh;
@@ -12,6 +7,9 @@
     text-align: center;
     padding-bottom: 10%;
     background:$card_background;
+    justify-items: center;
+    align-items: center;
+    
     h2,h4{
         
         background: $card_text_color;
@@ -29,7 +27,8 @@
     p{
         font-size: $psize;
         font-family: 'Antic Slab', serif;
-        @include width_center(90%);  
+        width: 85%;
+       
     }
 
     

@@ -16,9 +16,10 @@
 }
 
 #about-content{
-
+ 
     width: 85%;
     img{
+        
       @include image_to_fit($border_radius: 15px 15px 15px 15px)
         
     }
