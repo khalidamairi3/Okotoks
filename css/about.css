@@ -5,6 +5,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
 
 #introductory-video {
@@ -17,6 +18,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
 }
 
 #about-content {
@@ -29,6 +31,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 600px) {
@@ -40,6 +43,7 @@
     height: 35vh;
     -o-object-fit: cover;
        object-fit: cover;
+    overflow: hidden;
   }
 }
 
@@ -52,6 +56,7 @@
     height: 50vh;
     -o-object-fit: cover;
        object-fit: cover;
+    overflow: hidden;
   }
   #introductory-video {
     width: 70%;
@@ -62,6 +67,7 @@
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
   }
   #about-content {
     max-height: 50vh;
@@ -74,6 +80,7 @@
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 0 0 0 0;
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=about.css.map */

@@ -4,6 +4,11 @@
        @include image_to_fit();
     }
 }
+#main-menu + h2{
+    margin-top: 10vh;
+    font-size: 26pt;
+    color:$chestnut;
+}
 #menu{
     @include grid($width:85%,$grid_template_columns:repeat(auto-fit, minmax(250px, 1fr)),$grid_column_gap:3vw);
    
@@ -14,15 +19,24 @@
     @include card();
     grid-template-rows: 5fr 1fr 2fr;
     border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
 
     img{
-        @include image_to_fit(100%,20vh,15px 15px 0 0);
+        @include image_to_fit(120%,100%,15px 15px 0 0);
         opacity: 0.85;
         float: left;
     }
  
     p{  
         font-size: 0.9em;   
+    }
+
+    &:hover{
+        img{
+           
+            animation: zoom-out 1s ease-out;
+            
+        }
     }
  
 }
@@ -68,5 +82,13 @@
         }
     
     }
+   
+}
+
+@keyframes zoom-out {
+    100%{
+        width: 100%;
+    }
+
    
 }

@@ -1,14 +1,18 @@
 @import "_mixin_functions";
 
 .home{
-    max-height: 80vh;
+    position: relative;
+    height: 85vh;
+
     img{
-            @include image_to_fit($height:80vh);
-            opacity: 0.8;    
+        position: absolute;
+        @include image_to_fit($height:80vh);
+               
     }
+    
     div{
         position: relative;
-        bottom: 50vh;
+        top: 30vh;
         text-align: center;
         margin-bottom: 5vh;
         color:white ;
@@ -20,6 +24,17 @@
         text-shadow: 2px 2px black;
 
     }
+}
+#first-image{
+    
+    animation: slide1 15s infinite ease-out ;
+}
+#second-image{
+    animation: slide2 15s infinite ease-out ;
+    
+}
+#third-image{
+    animation: slide3 15s infinite ease-out;
 }
 
 #offer-cards{
@@ -109,7 +124,7 @@
                 @include image_to_fit($height:85vh);   
         }
         div{
-            bottom: 50vh;
+            top: 40vh;
             font-size: 30pt;
     
         }
@@ -131,6 +146,43 @@
     #rating{
    
         font-size: 2.0rem;
+    }
+
+}
+
+@keyframes slide1 {
+    33%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+@keyframes slide2 {
+    33%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+@keyframes slide3 {
+    33%{
+        opacity: 1;
+    }
+    66%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
     }
 
 }

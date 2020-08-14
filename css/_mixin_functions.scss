@@ -40,6 +40,7 @@
     height: $height;
     object-fit: cover;
     border-radius: $border_radius;
+    overflow: hidden;
 }
 
 @mixin  grid($width:100%,$height:100%,$min_height:12vh,$grid_template_columns:null,$grid_column_gap:0){
