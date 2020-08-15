@@ -6,6 +6,7 @@
 
     img{
         position: absolute;
+        opacity: 0;
         @include image_to_fit($height:80vh);
                
     }
@@ -124,7 +125,7 @@
                 @include image_to_fit($height:85vh);   
         }
         div{
-            top: 40vh;
+           
             font-size: 30pt;
     
         }
