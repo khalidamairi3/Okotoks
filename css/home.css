@@ -73,8 +73,9 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 15px 15px 15px 15px;
-  -ms-grid-rows: 5fr 1fr 2fr;
-      grid-template-rows: 5fr 1fr 2fr;
+  -ms-grid-rows: 5fr 1fr 1fr;
+      grid-template-rows: 5fr 1fr 1fr;
+  max-height: 80vh;
 }
 
 .offer-card h2, .offer-card h4 {
@@ -238,6 +239,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-grid-rows: 5fr 1fr 3fr;
+        grid-template-rows: 5fr 1fr 3fr;
     max-height: 80vh;
     margin-top: 0;
   }

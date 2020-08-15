@@ -34,7 +34,7 @@
     &:hover{
         img{
            
-            animation: zoom-out 1s ease-out;
+            animation: zoom-out 2s ease-out;
             
         }
     }
@@ -86,8 +86,11 @@
 }
 
 @keyframes zoom-out {
-    100%{
+    50%{
         width: 100%;
+    }
+    100%{
+        width: 120%;
     }
 
    

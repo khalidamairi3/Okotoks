@@ -79,8 +79,8 @@
 }
 
 .menu-card:hover img {
-  -webkit-animation: zoom-out 1s ease-out;
-          animation: zoom-out 1s ease-out;
+  -webkit-animation: zoom-out 2s ease-out;
+          animation: zoom-out 2s ease-out;
 }
 
 .sizes {
@@ -160,14 +160,20 @@
 }
 
 @-webkit-keyframes zoom-out {
-  100% {
+  50% {
     width: 100%;
+  }
+  100% {
+    width: 120%;
   }
 }
 
 @keyframes zoom-out {
-  100% {
+  50% {
     width: 100%;
+  }
+  100% {
+    width: 120%;
   }
 }
 /*# sourceMappingURL=menu.css.map */
