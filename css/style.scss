@@ -24,7 +24,7 @@ body{
     @include header();
 }
 
-//tablet and desktop header to not e shown in mobile version//
+//tablet and desktop header to not be shown in mobile version//
 .header{
     display: none;
 }
